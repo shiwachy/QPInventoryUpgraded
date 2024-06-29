@@ -1,0 +1,107 @@
+<div class="search-container">
+    <div class="search">
+        <label for="search">Enter Keywords</label><br>
+        <input type="text" id="search" list="datalistOptions" [(ngModel)]="searchInput">
+    </div>
+    <button class="btn btn-primary link-button" (click)="filterHyperlink()">GetLink</button>
+</div>
+
+
+  <!-- This provides auto complete while adding keyword -->
+<datalist id="datalistOptions">
+    <option *ngFor="let key of keywordList">
+      <li>{{ key.Keyword }}</li>
+    </option>
+</datalist>
+
+
+<div>
+  <h4>URLS</h4>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">SN</th>
+        <th scope="col">Link</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let link of filteredHyperlinks, let i=index">
+        <td>{{i+1}}</td>
+        <td>{{link.Hyperlink}}</td>
+        <td>
+          <button class="btn btn-dark btn-sm bg-success" (click)="copyUrl(link.Hyperlink)">copy</button>
+          <button class="btn btn-dark btn-sm bg-primary" (click)="editHyperlink(link)">edit</button>
+          <button class="btn btn-dark btn-sm bg-danger" (click)="onDeleteClick(link)">delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+<div class="modal fade" id="editHyperlinkModel" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Hyperlink Info</h5>
+        <button type="button" class="close" (click)="closeModal('editHyperlinkModel')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form class="form-container">
+              <div class="form-group domain">
+                <h5>Domain: {{catInfo.CategoryName}}</h5>
+                <button class="btn btn-outline-info btn-sm" (click)="onClickChangeDomain()">Change</button>
+              </div>
+              <div class="form-group">
+                  <label for="link">Link</label>
+                  <input type="text" class="form-control" id="link" name="Link" [(ngModel)]="_hyperlink.Hyperlink">
+              </div>
+              <div class="form-group">
+                <label for="keywords">Keywords:</label>
+                <input type="text" class="form-control" [(ngModel)]="_keyword.Keyword" id="keywords" name="Description">
+              </div>
+              <div class="keywordList"> 
+                <div class="key" *ngFor="let key of _hyperlink.Keywords">
+                  <a (click)="removeKeyword(key)">&#10005;</a>
+                  <h5>{{key.Keyword}}</h5>
+                </div>
+              </div>
+            </form>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="addKeyword()">Add Keyword</button>
+        <button type="button" class="btn btn-primary" (click)="updateHyperlink()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- CategoryList modal -->
+<div class="modal fade" id="catListModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header domain">
+        <h5 class="modal-title" id="catListModal-title">Select Domain</h5>
+        <button type="button" class="btn btn-danger btn-sm" (click)="closeModal('catListModal')">
+          Dismiss
+        </button>
+      </div>
+      <div>
+        <input type="text" class="searchbar" (input)="onInputChange()" [(ngModel)]="searchCat" placeholder="Enter Keyword">
+      </div>
+      <div class="modal-body">
+         <ul>
+            <li *ngFor="let cat of catList" class="cat" (click)="onClickCat(cat)">
+              {{cat.CategoryName}}
+            </li>
+         </ul>
+      </div>
+    </div>
+  </div>
+</div>

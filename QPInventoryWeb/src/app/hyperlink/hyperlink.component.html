@@ -1,0 +1,40 @@
+<form class="form-container">
+    <h4 id="selected-cat">Category: {{this.catDetail.CategoryName}}</h4>
+    <div class="form-group">
+      <label for="hyperlink">Hyperlink</label>
+      <input type="text" class="form-control" [(ngModel)]="_hyperlink.Hyperlink" 
+        (focusout)="onHyperlinkEntered()"
+        id="hyperlink" name="Hyperlink" placeholder="https://info.com">
+    </div>
+    <div class="form-group">
+      <label for="keyword">Keyword</label>
+      <input type="text" class="form-control" [(ngModel)]="_keyword.Keyword" name="Keyword" id="keyword" list="datalistOptions" placeholder="Interview Question">
+    </div>
+    <div class="keywordList"> 
+      <div class="key" *ngFor="let key of _hyperlink.Keywords">
+        <a (click)="removeKeyword(key)">&#10005;</a>
+        <h5>{{key.Keyword}}</h5>
+      </div>
+    </div>
+    <button type="button" (click)="addKeyword()">Add Keyword</button>
+    <button type="submit" (click)="actionControl()" class="btn btn-primary">{{actionName}}</button>
+  </form>
+
+
+
+
+  <!-- This provides auto complete while adding keyword -->
+<datalist id="datalistOptions">
+    <option *ngFor="let key of keywordList">
+      <li>{{key.Keyword}}</li>
+    </option>
+</datalist>
+
+
+
+
+
+
+
+
+

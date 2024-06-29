@@ -1,0 +1,77 @@
+/* External stylesheet styles.css */
+.form-container {
+  width: 400px;
+  margin: 0px 30px;
+}
+
+.form-group label {
+  font-size: 18px;
+  margin: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="button"]:hover {
+  background-color: #ddc0b7;
+}
+
+.keyword-input-container {
+  margin-bottom: 10px;
+}
+
+.keyword-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.keyword-input-wrapper input[type="text"] {
+  flex: 1;
+  margin-right: 5px;
+  /* Adjust the spacing between input and button */
+}
+
+.keywordList{
+  display: flex;
+  flex-direction: row;
+  margin:10px 3px;
+}
+
+.key{
+  width: fit-content;
+  background-color: #a9bedc;
+  padding: 0px 4px;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 3px;
+  margin: 0px 5px;
+  border: none;
+}
+.key a{
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  height: fit-content;
+  position: relative;
+  top: -5px;
+  right: -4px;
+  font-weight: 600;
+}
+
+.key a:hover{
+  color: red;
+}

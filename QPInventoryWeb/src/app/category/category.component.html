@@ -1,0 +1,72 @@
+
+<div class="category">
+    <div class="cat-head">
+      <h4>CATEGORIES</h4>
+      <button id="searchIcon" (click)="onSearchIconClick()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+          <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="searchbar-con" *ngIf="showSearchbar">
+      <input type="text" class="searchbar" (input)="onInputChange()" [(ngModel)]="searchInput" placeholder="Enter Keyword">
+    </div>
+    <div class="list-group list-group-flush list-group-numbered ">
+        <button type="button" class="cat-item list-group-item list-group-item-action" 
+          *ngFor="let ele of catList"
+          (click)="onClickCat(ele)">
+          {{ele.CategoryName}}
+        </button>   
+    </div>  
+    <button class="add-cat-btn btn btn-primary" data-toggle="modal" (click)="openModal('categoryModal')">Manage Category</button>
+</div>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create New Category</h5>
+          <button type="button" class="close" (click)="closeModal('exampleModal')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form class="form-container">
+                <div class="form-group">
+                  <label for="catName">Category Name</label>
+                  <input type="text" class="form-control" [(ngModel)]="catInfo.CategoryName" 
+                    list="categoryOptions" id="catName" name="CategoryName" 
+                    (input)="onCatNameInputChange()"
+                    placeholder="QuestPond" required>
+                </div>
+                <div class="form-group">
+                    <label for="link">Link</label>
+                    <input type="text" class="form-control" [(ngModel)]="catInfo.Link" id="link" name="Link" placeholder="https://@info.com">
+                  </div>
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <input type="text" class="form-control" [(ngModel)]="catInfo.Description" id="description" name="Description" placeholder="something about category">
+                </div>
+              </form>  
+        </div>
+        <div class="modal-footer" *ngIf="!actionBtnStatus">
+          <button type="button" class="btn btn-primary" (click)="onClickSaveCat()">Save</button>
+        </div>
+        <div class="modal-footer" *ngIf="actionBtnStatus">
+          <!-- <button type="button" class="btn btn-danger" (click)="onClickDelete()">Delete</button> -->
+          <button type="button" class="btn btn-primary" (click)="onClickUpdate()">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Datalist -->
+ <datalist id="categoryOptions">
+    <option *ngFor="let ele of catList">
+      <li>{{ ele.CategoryName }}</li>
+    </option>
+</datalist>

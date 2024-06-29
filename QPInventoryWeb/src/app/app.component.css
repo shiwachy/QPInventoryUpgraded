@@ -1,0 +1,14 @@
+.body-container{
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.cat{
+    width: 30%;
+}
+
+.route{
+    width: 70%;
+}
