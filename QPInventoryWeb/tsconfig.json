@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "../QpInventoryAPI/QPInventoryV2/wwwroot/AngularProd",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,

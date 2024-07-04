@@ -79,7 +79,6 @@ export class CategoryComponent implements OnInit {
 
   catDetail:Category = new Category();
   onClickCat(obj:Category){
-    console.log(obj);
     this.actionService.sendCatDetail(obj);
     this.mainService.getHyperlinksByCatId(obj.CategoryId);
   }

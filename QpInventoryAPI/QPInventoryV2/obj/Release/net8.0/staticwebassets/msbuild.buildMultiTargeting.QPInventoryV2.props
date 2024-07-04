@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\QPInventoryV2.props" />
+</Project>

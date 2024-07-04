@@ -39,7 +39,7 @@ export class HyperlinkComponent implements OnInit {
     // this.mainService.getHyperlinkInfo(this._hyperlink.Hyperlink);
     var ln = JSON.stringify(this._hyperlink.Hyperlink);
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    this.http.post<hyperlink>("https://localhost:7286/api/Main/GetHyperlinkInfo",ln,{headers}).subscribe(
+    this.http.post<hyperlink>("/api/Main/GetHyperlinkInfo",ln,{headers}).subscribe(
       (res)=>{
         this.onLinkFound(res);
       },(error)=>{
@@ -72,8 +72,8 @@ export class HyperlinkComponent implements OnInit {
 
 
   addKeyword() {
-    var isAvailable = this._hyperlink.Keywords.some(x => x.Keyword == this._keyword.Keyword);
-    var obj = this.keywordList.find(x => x.Keyword == this._keyword.Keyword);
+    var isAvailable = this._hyperlink.Keywords.some(x => x.Keyword.trim() == this._keyword.Keyword.trim());
+    var obj = this.keywordList.find(x => x.Keyword.trim() == this._keyword.Keyword.trim());
     if (this._keyword.Keyword != "") {
       if (!isAvailable) {
         if (obj != undefined) {
@@ -114,7 +114,14 @@ export class HyperlinkComponent implements OnInit {
       if (this._hyperlink.Hyperlink != "" && this._hyperlink.Keywords.length > 0) {
         this._hyperlink.CategoryId = this.catDetail.CategoryId;
         this.keywordList = new Array<keyword>();
-        this.mainService.postHyperlink(this._hyperlink);
+        //this.mainService.postHyperlink(this._hyperlink);
+        this.mainService.postHyperlink(this._hyperlink).subscribe(
+          res=>{
+            let catId = this._hyperlink.CategoryId;
+            this._hyperlink=new hyperlink();
+            this._hyperlink.CategoryId=catId;
+          }
+        )
       } else {
         alert("Some field are empty");
       }

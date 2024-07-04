@@ -17,11 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/QPInventoryWeb",
+            "outputPath": "../QpInventoryAPI/QPInventoryV2/wwwroot/AngularProd",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "deployUrl": "/AngularProd/",
             "assets": [
               "src/favicon.ico",
               "src/assets"

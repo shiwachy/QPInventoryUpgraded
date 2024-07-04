@@ -5,6 +5,38 @@
       "PackagePath": "staticwebassets\\QPInventoryV2.bundle.scp.css"
     },
     {
+      "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\3rdpartylicenses.txt",
+      "PackagePath": "staticwebassets\\AngularProd\\3rdpartylicenses.txt"
+    },
+    {
+      "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\favicon.ico",
+      "PackagePath": "staticwebassets\\AngularProd\\favicon.ico"
+    },
+    {
+      "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\index.html",
+      "PackagePath": "staticwebassets\\AngularProd\\index.html"
+    },
+    {
+      "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\main.ede8a86b1f0eede0.js",
+      "PackagePath": "staticwebassets\\AngularProd\\main.ede8a86b1f0eede0.js"
+    },
+    {
+      "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\polyfills.740d0373151268c5.js",
+      "PackagePath": "staticwebassets\\AngularProd\\polyfills.740d0373151268c5.js"
+    },
+    {
+      "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\runtime.5a8291ffbd331c12.js",
+      "PackagePath": "staticwebassets\\AngularProd\\runtime.5a8291ffbd331c12.js"
+    },
+    {
+      "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\scripts.63ba1d8a13a46f00.js",
+      "PackagePath": "staticwebassets\\AngularProd\\scripts.63ba1d8a13a46f00.js"
+    },
+    {
+      "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\styles.35bc88699e8a746d.css",
+      "PackagePath": "staticwebassets\\AngularProd\\styles.35bc88699e8a746d.css"
+    },
+    {
       "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

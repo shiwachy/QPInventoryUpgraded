@@ -14,7 +14,7 @@ export class MainService {
   constructor(private http:HttpClient,private dmService:DMService) { }
 
   getKeywordsList(){
-    this.http.get<keyword[]>("https://localhost:7286/api/Main/GetKeywords").subscribe(
+    this.http.get<keyword[]>("/api/Main/GetKeywords").subscribe(
       (res)=>{
           this.dmService.mapKeywordList(res);
       },(error)=>{
@@ -26,7 +26,7 @@ export class MainService {
 
   //Http calls for Category Module
   // postCategory(obj:Category){
-  //   this.http.post("https://localhost:7286/api/Main/PostCategory",obj).subscribe(
+  //   this.http.post("/api/Main/PostCategory",obj).subscribe(
   //     (res)=>{
   //       return res;
   //       alert("Category Created Successfully");
@@ -36,11 +36,11 @@ export class MainService {
   //   )
   // }
   postCategory(obj:Category):Observable<any>{
-    return this.http.post<Category>("https://localhost:7286/api/Main/PostCategory",obj);
+    return this.http.post<Category>("/api/Main/PostCategory",obj);
   }
 
   getCategoryList(){
-    this.http.get("https://localhost:7286/api/Main/GetCategory").subscribe(
+    this.http.get("/api/Main/GetCategory").subscribe(
       (res)=>{
           this.dmService.mapCatList(res);
       },(error)=>{
@@ -50,7 +50,7 @@ export class MainService {
   }
 
   deleteCategory(id:number){
-    this.http.delete("https://localhost:7286/api/Main/"+id).subscribe(
+    this.http.delete("/api/Main/"+id).subscribe(
       (res)=>{
           console.log(res);
           window.location.reload();
@@ -61,7 +61,7 @@ export class MainService {
   }
 
   updateCategory(obj:Category){
-    this.http.put("https://localhost:7286/api/Main/UpdateCategory"+obj.CategoryId,obj).subscribe(
+    this.http.put("/api/Main/UpdateCategory"+obj.CategoryId,obj).subscribe(
       (res)=>{
         alert("Updated Successfully");
       },(error)=>{
@@ -71,19 +71,22 @@ export class MainService {
   }
 
   // Http calls hyperlinks
-  postHyperlink(obj:hyperlink){
-    this.http.post<hyperlink>("https://localhost:7286/api/Main/PostHyperlink",obj).subscribe(
-      (res)=>{
-        alert("Hyperlink Added");
-        this.getKeywordsList();
-      },(error)=>{
-          console.log("Something went wrong");
-      }
-    )
+  // postHyperlink(obj:hyperlink){
+  //   this.http.post<hyperlink>("/api/Main/PostHyperlink",obj).subscribe(
+  //     (res)=>{
+  //       alert("Hyperlink Added");
+  //       this.getKeywordsList();
+  //     },(error)=>{
+  //         console.log("Something went wrong");
+  //     }
+  //   )
+  // }
+  postHyperlink(obj:hyperlink):Observable<any>{
+    return this.http.post<any>("/api/Main/PostHyperlink",obj);
   }
 
   getHyperlinksByCatId(catId:number){
-    this.http.get<hyperlink[]>("https://localhost:7286/api/Main/"+catId).subscribe(
+    this.http.get<hyperlink[]>("/api/Main/"+catId).subscribe(
       (res)=>{
         this.dmService.mapHyperlinkList(res);
       },(error)=>{
@@ -92,10 +95,16 @@ export class MainService {
     )
   }
 
+  // getHyperlinksByCatId(catId:number):Observable<any>{
+  //   return this.http.get<hyperlink[]>("/api/Main/"+catId) 
+  // }
+
+
+
   // getHyperlinkInfo(link:string){
   //   var ln = JSON.stringify(link);
   //   const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-  //   this.http.post("https://localhost:7286/api/Main/GetHyperlinkInfo",ln,{headers}).subscribe(
+  //   this.http.post("/api/Main/GetHyperlinkInfo",ln,{headers}).subscribe(
   //     (res)=>{
   //       this.dmService.mapFoundLink(res);
   //     },(error)=>{
@@ -106,7 +115,7 @@ export class MainService {
 
 
   updateHyperlink(obj:hyperlink){
-    this.http.put<hyperlink>("https://localhost:7286/api/Main/PutHyperlink",obj)
+    this.http.put<hyperlink>("/api/Main/PutHyperlink",obj)
     .subscribe(
       (res)=>{
         alert("Hyperlink Updated");
@@ -118,7 +127,7 @@ export class MainService {
 
 
   deleteHyperlink(obj:hyperlink){
-    this.http.post("https://localhost:7286/api/Main/DeleteHyperlink",obj).subscribe(
+    this.http.post("/api/Main/DeleteHyperlink",obj).subscribe(
       (res)=>{
         
       }

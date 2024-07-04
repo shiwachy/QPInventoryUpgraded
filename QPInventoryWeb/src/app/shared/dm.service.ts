@@ -43,6 +43,9 @@ export class DMService {
 
   hyperlinkList:Array<hyperlink> = new Array<hyperlink>();
   mapHyperlinkList(obj:any){
+    while (this.hyperlinkList.length > 0) {
+      this.hyperlinkList.pop();
+    }
     for (let key in obj) {
       if (obj.hasOwnProperty(key)) {
         let hyperlinkObj = obj[key];
