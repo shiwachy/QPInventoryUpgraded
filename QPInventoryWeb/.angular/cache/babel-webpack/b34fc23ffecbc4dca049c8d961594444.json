@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Category {\n  constructor() {\n    this.CategoryId = 0;\n    this.CategoryName = \"\";\n    this.Link = \"\";\n    this.Description = \"\";\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
