@@ -1,1 +1,0 @@
-{"ast":null,"code":"export class hyperlink {\n  constructor() {\n    this.HyperlinkId = 0;\n    this.CategoryId = 0;\n    this.Hyperlink = \"\";\n    this.Keywords = new Array();\n  }\n\n}\nexport class keyword {\n  constructor() {\n    this.KeywordId = 0;\n    this.Keyword = \"\";\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
