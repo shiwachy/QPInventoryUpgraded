@@ -78,12 +78,13 @@ export class SearchComponent implements OnInit {
   }
 
   addKeyword() {
-    var isAvailable = this._hyperlink.Keywords.some(x => x.Keyword == this._keyword.Keyword);
-    var obj = this.keywordList.find(x => x.Keyword == this._keyword.Keyword);
+    var isAvailable = this._hyperlink.Keywords.some(x => x.Keyword.trim().toLocaleLowerCase() == this._keyword.Keyword.trim().toLocaleLowerCase());
+    var obj = this.keywordList.find(x => x.Keyword.trim().toLocaleLowerCase() == this._keyword.Keyword.trim().toLocaleLowerCase());
     if (this._keyword.Keyword != "") {
       if (!isAvailable) {
         if (obj != undefined) {
           this._keyword.KeywordId = obj.KeywordId;
+          this._keyword.Keyword = obj.Keyword;
           this._hyperlink.Keywords.push(this._keyword);
           this._keyword = new keyword();
         } else {
@@ -109,8 +110,23 @@ export class SearchComponent implements OnInit {
     }
   }
 
-  updateHyperlink(){
-    this.mainService.updateHyperlink(this._hyperlink);
+  // updateHyperlink(){
+  //   this.mainService.updateHyperlink(this._hyperlink);
+  //   this.closeModal("catListModal");
+  // }
+  updateHyperlink() {
+    this.mainService.updateHyperlink(this._hyperlink).subscribe(
+      res=>{
+        alert("Hyperlink Updated");
+            let catId = this._hyperlink.CategoryId;
+            this._hyperlink=new hyperlink();
+            this._hyperlink.CategoryId=catId;
+      },error=>{
+        let catId = this._hyperlink.CategoryId;
+        this._hyperlink=new hyperlink();
+        this._hyperlink.CategoryId=catId;
+      }
+    );
     this.closeModal("catListModal");
   }
 

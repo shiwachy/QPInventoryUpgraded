@@ -114,15 +114,15 @@ export class MainService {
   // }
 
 
-  updateHyperlink(obj:hyperlink){
-    this.http.put<hyperlink>("/api/Main/PutHyperlink",obj)
-    .subscribe(
-      (res)=>{
-        alert("Hyperlink Updated");
-      },(error)=>{
-        alert("Something went wrong");
-      }
-    )
+  updateHyperlink(obj:hyperlink):Observable<any>{
+   return this.http.put<any>("/api/Main/PutHyperlink",obj);
+    // .subscribe(
+    //   (res)=>{
+    //     alert("Hyperlink Updated");
+    //   },(error)=>{
+    //     alert("Updated");
+    //   }
+    // )
   }
 
 

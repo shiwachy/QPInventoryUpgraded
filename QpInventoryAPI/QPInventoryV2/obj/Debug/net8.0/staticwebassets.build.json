@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v/0/TsrWD+yS745Ldu62MxmO5W6ykYfartv1wrdUSIE=",
+  "Hash": "twxqJmnCs/OhRGNJaYGMXdiCT2ApgVDqdiYR/sI7KHI=",
   "Source": "QPInventoryV2",
   "BasePath": "_content/QPInventoryV2",
   "Mode": "Default",
@@ -112,12 +112,12 @@
       "OriginalItemSpec": "wwwroot\\AngularProd\\index.html"
     },
     {
-      "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\main.ede8a86b1f0eede0.js",
+      "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\main.js",
       "SourceId": "QPInventoryV2",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\",
       "BasePath": "_content/QPInventoryV2",
-      "RelativePath": "AngularProd/main.ede8a86b1f0eede0.js",
+      "RelativePath": "AngularProd/main.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,15 +128,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\AngularProd\\main.ede8a86b1f0eede0.js"
+      "OriginalItemSpec": "wwwroot\\AngularProd\\main.js"
     },
     {
-      "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\polyfills.740d0373151268c5.js",
+      "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\polyfills.js",
       "SourceId": "QPInventoryV2",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\",
       "BasePath": "_content/QPInventoryV2",
-      "RelativePath": "AngularProd/polyfills.740d0373151268c5.js",
+      "RelativePath": "AngularProd/polyfills.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -147,15 +147,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\AngularProd\\polyfills.740d0373151268c5.js"
+      "OriginalItemSpec": "wwwroot\\AngularProd\\polyfills.js"
     },
     {
-      "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\runtime.5a8291ffbd331c12.js",
+      "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\runtime.js",
       "SourceId": "QPInventoryV2",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\",
       "BasePath": "_content/QPInventoryV2",
-      "RelativePath": "AngularProd/runtime.5a8291ffbd331c12.js",
+      "RelativePath": "AngularProd/runtime.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -166,15 +166,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\AngularProd\\runtime.5a8291ffbd331c12.js"
+      "OriginalItemSpec": "wwwroot\\AngularProd\\runtime.js"
     },
     {
-      "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\scripts.63ba1d8a13a46f00.js",
+      "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\scripts.js",
       "SourceId": "QPInventoryV2",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\",
       "BasePath": "_content/QPInventoryV2",
-      "RelativePath": "AngularProd/scripts.63ba1d8a13a46f00.js",
+      "RelativePath": "AngularProd/scripts.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -185,15 +185,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\AngularProd\\scripts.63ba1d8a13a46f00.js"
+      "OriginalItemSpec": "wwwroot\\AngularProd\\scripts.js"
     },
     {
-      "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\styles.35bc88699e8a746d.css",
+      "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\styles.css",
       "SourceId": "QPInventoryV2",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\",
       "BasePath": "_content/QPInventoryV2",
-      "RelativePath": "AngularProd/styles.35bc88699e8a746d.css",
+      "RelativePath": "AngularProd/styles.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -204,7 +204,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\AngularProd\\styles.35bc88699e8a746d.css"
+      "OriginalItemSpec": "wwwroot\\AngularProd\\styles.css"
     },
     {
       "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\css\\site.css",

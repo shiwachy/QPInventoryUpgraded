@@ -72,19 +72,19 @@ export class HyperlinkComponent implements OnInit {
 
 
   addKeyword() {
-    var isAvailable = this._hyperlink.Keywords.some(x => x.Keyword.trim() == this._keyword.Keyword.trim());
-    var obj = this.keywordList.find(x => x.Keyword.trim() == this._keyword.Keyword.trim());
+    var isAvailable = this._hyperlink.Keywords.some(x => x.Keyword.trim().toLocaleLowerCase() == this._keyword.Keyword.trim().toLocaleLowerCase());
+    var obj = this.keywordList.find(x => x.Keyword.trim().toLocaleLowerCase() == this._keyword.Keyword.trim().toLocaleLowerCase());
     if (this._keyword.Keyword != "") {
       if (!isAvailable) {
         if (obj != undefined) {
           this._keyword.KeywordId = obj.KeywordId;
+          this._keyword.Keyword = obj.Keyword;
           this._hyperlink.Keywords.push(this._keyword);
           this._keyword = new keyword();
         } else {
           this._hyperlink.Keywords.push(this._keyword);
           this._keyword = new keyword();
         }
-        console.log(this._hyperlink.Keywords);
       } else {
         this._keyword.Keyword = "";
         alert("Already exists");
@@ -102,6 +102,7 @@ export class HyperlinkComponent implements OnInit {
 
 
   actionControl(){
+    console.log(this._hyperlink);
     if(!this.actionControlFlag){
         this.onClickSubmit();
     }else{
@@ -120,6 +121,10 @@ export class HyperlinkComponent implements OnInit {
             let catId = this._hyperlink.CategoryId;
             this._hyperlink=new hyperlink();
             this._hyperlink.CategoryId=catId;
+          },error=>{
+            let catId = this._hyperlink.CategoryId;
+            this._hyperlink=new hyperlink();
+            this._hyperlink.CategoryId=catId;
           }
         )
       } else {
@@ -132,7 +137,18 @@ export class HyperlinkComponent implements OnInit {
 
   onClickUpdate() {
     this._hyperlink.CategoryId=this.catDetail.CategoryId;
-    this.mainService.updateHyperlink(this._hyperlink);
+    this.mainService.updateHyperlink(this._hyperlink).subscribe(
+      res=>{
+        alert("Hyperlink Updated");
+            let catId = this._hyperlink.CategoryId;
+            this._hyperlink=new hyperlink();
+            this._hyperlink.CategoryId=catId;
+      },error=>{
+        let catId = this._hyperlink.CategoryId;
+        this._hyperlink=new hyperlink();
+        this._hyperlink.CategoryId=catId;
+      }
+    );
   }
 
 
