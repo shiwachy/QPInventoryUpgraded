@@ -134,4 +134,7 @@ G:\InternTask\QPInventoryUpgraded\QpInventoryAPI\QPInventoryV2\obj\Debug\net8.0\
 G:\InternTask\QPInventoryUpgraded\QpInventoryAPI\QPInventoryV2\obj\Debug\net8.0\QPInventoryV2.pdb
 G:\InternTask\QPInventoryUpgraded\QpInventoryAPI\QPInventoryV2\obj\Debug\net8.0\QPInventoryV2.genruntimeconfig.cache
 G:\InternTask\QPInventoryUpgraded\QpInventoryAPI\QPInventoryV2\obj\Debug\net8.0\ref\QPInventoryV2.dll
+<<<<<<< HEAD
 G:\InternTask\QPInventoryUpgraded\QpInventoryAPI\QPInventoryV2\obj\Debug\net8.0\QPInventoryV2.sourcelink.json
+=======
+>>>>>>> 965d6b431c05997a9384c74234625b1a5ab0c5be

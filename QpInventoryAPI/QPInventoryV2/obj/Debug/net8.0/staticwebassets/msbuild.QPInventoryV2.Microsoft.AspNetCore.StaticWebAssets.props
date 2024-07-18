@@ -1,5 +1,6 @@
 ﻿<Project>
   <ItemGroup>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\AngularProd\3rdpartylicenses.txt))">
       <SourceType>Package</SourceType>
       <SourceId>QPInventoryV2</SourceId>
@@ -128,6 +129,8 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\AngularProd\styles.css))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> 965d6b431c05997a9384c74234625b1a5ab0c5be
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\site.css))">
       <SourceType>Package</SourceType>
       <SourceId>QPInventoryV2</SourceId>

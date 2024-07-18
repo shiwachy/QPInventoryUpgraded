@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QPInventoryV2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+702ee92227f4c28858633b7b1504860ef916464f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3c83ed9b90f866716236a9085ccb79f9b9ad99a")]
 [assembly: System.Reflection.AssemblyProductAttribute("QPInventoryV2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QPInventoryV2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

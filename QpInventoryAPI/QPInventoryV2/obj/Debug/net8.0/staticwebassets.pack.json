@@ -5,6 +5,7 @@
       "PackagePath": "staticwebassets\\QPInventoryV2.bundle.scp.css"
     },
     {
+<<<<<<< HEAD
       "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\3rdpartylicenses.txt",
       "PackagePath": "staticwebassets\\AngularProd\\3rdpartylicenses.txt"
     },
@@ -37,6 +38,8 @@
       "PackagePath": "staticwebassets\\AngularProd\\styles.css"
     },
     {
+=======
+>>>>>>> 965d6b431c05997a9384c74234625b1a5ab0c5be
       "Id": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

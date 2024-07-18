@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "twxqJmnCs/OhRGNJaYGMXdiCT2ApgVDqdiYR/sI7KHI=",
+=======
+  "Hash": "BJLjjicCqj0b2RL2ZuS3WtNQEZNVlwxXX97D0rFqyms=",
+>>>>>>> 965d6b431c05997a9384c74234625b1a5ab0c5be
   "Source": "QPInventoryV2",
   "BasePath": "_content/QPInventoryV2",
   "Mode": "Default",
@@ -55,6 +59,7 @@
       "OriginalItemSpec": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QPInventoryV2.bundle.scp.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\AngularProd\\3rdpartylicenses.txt",
       "SourceId": "QPInventoryV2",
       "SourceType": "Discovered",
@@ -207,6 +212,8 @@
       "OriginalItemSpec": "wwwroot\\AngularProd\\styles.css"
     },
     {
+=======
+>>>>>>> 965d6b431c05997a9384c74234625b1a5ab0c5be
       "Identity": "G:\\InternTask\\QPInventoryUpgraded\\QpInventoryAPI\\QPInventoryV2\\wwwroot\\css\\site.css",
       "SourceId": "QPInventoryV2",
       "SourceType": "Discovered",
